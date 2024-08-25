@@ -1,4 +1,4 @@
-import 'package:checkout_payment_ui/core/utils/styles.dart';
+import 'package:checkout_feature/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
