@@ -1,9 +1,9 @@
-import 'package:checkout_feature/core/utils/models/ephemeral_key_model/ephemeral_key_model.dart';
-import 'package:checkout_feature/core/utils/models/payment_intent_model/payment_intent_model.dart';
+import 'package:checkout_feature/Features/checkout/data/models/ephemeral_key_model/ephemeral_key_model.dart';
+import 'package:checkout_feature/Features/checkout/data/models/payment_intent_model/payment_intent_model.dart';
 import 'package:checkout_feature/core/utils/services/api_service.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import '../models/init_payment_sheet_input.dart';
-import '../models/payment_intent_input_model.dart';
+import '../../../Features/checkout/data/models/init_payment_sheet_input.dart';
+import '../../../Features/checkout/data/models/payment_intent_input_model.dart';
 
 class StripePaymenyService {
   final ApiService _apiService;
@@ -21,7 +21,7 @@ class StripePaymenyService {
     return paymentIntentModel;
   }
 
-  // (2) create Ephemeral Key
+  // (2) create Ephemeral Key {this is for customer not for Gist}
   Future<EphemeralKeyModel> createEphemeralKey({
     required String customerId,
   }) async {
