@@ -2,7 +2,7 @@ import 'dart:developer';
 import 'package:checkout_feature/Features/checkout/presentation/views/thank_you_view.dart';
 import 'package:checkout_feature/Features/checkout/presentation/views/widgets/custom_credit_card.dart';
 import 'package:checkout_feature/Features/checkout/presentation/views/widgets/payment_methods_list_view.dart';
-import 'package:checkout_feature/core/widgets/custom_button.dart';
+import 'package:checkout_feature/Features/checkout/presentation/views/widgets/custom_button_builder.dart';
 import 'package:flutter/material.dart';
 
 class PaymentDetailsViewBody extends StatefulWidget {
@@ -35,7 +35,7 @@ class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 12, left: 16, right: 16),
-                child: CustomButton(
+                child: CustomButtonBuilder(
                   onTap: () {
                     if (formKey.currentState!.validate()) {
                       formKey.currentState!.save();
